@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,12 +23,13 @@ import kr.ajousw.myspringweb.dto.MusicList;
 import kr.ajousw.myspringweb.entity.FavoriteMusic;
 import kr.ajousw.myspringweb.repository.FavoriteRepository;
 import kr.ajousw.myspringweb.service.MusicService;
+import lombok.RequiredArgsConstructor;
 
 
 @RestController
+@RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:3000")
 public class MyWebController {
-    @Autowired
     MusicService service;
 
     @GetMapping(value = "/musicSearch/{term}")

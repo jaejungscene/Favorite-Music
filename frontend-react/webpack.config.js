@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const appName = 'app';
-
+console.log(__dirname)
 //CommonJS syntax when exporting the module
 module.exports = {
     entry: [path.join(__dirname, 'src', 'index.js')],
     output: {
         filename: appName+'.bundle.js',
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'public')
     },
     module: {
         rules: [{
@@ -30,7 +30,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'public'),
         },
-	    port: 3000,
+	    port: 8088,
         allowedHosts: 'all',
     },
     plugins: [

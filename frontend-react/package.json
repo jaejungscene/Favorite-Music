@@ -23,7 +23,7 @@
     "webpack-dev-server": "^4.13.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --port 3000",
+    "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
